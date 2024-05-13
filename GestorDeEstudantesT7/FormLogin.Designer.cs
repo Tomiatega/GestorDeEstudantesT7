@@ -93,6 +93,7 @@
             this.textBoxSenha.Name = "textBoxSenha";
             this.textBoxSenha.Size = new System.Drawing.Size(129, 20);
             this.textBoxSenha.TabIndex = 5;
+            this.textBoxSenha.UseSystemPasswordChar = true;
             // 
             // buttonLogin
             // 

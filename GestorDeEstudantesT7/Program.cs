@@ -18,18 +18,16 @@ namespace GestorDeEstudantesT7
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Login_Form());
 
-            FormLogin formLogin = new FormLogin ();
+            FormLogin formLogin = new FormLogin();
 
             if (formLogin.ShowDialog() == DialogResult.OK)
             {
                 Application.Run(new FormPrincipal());
             }
-            else
+            else 
             {
                 Application.Exit();
             }
         }
-
-
     }
 }

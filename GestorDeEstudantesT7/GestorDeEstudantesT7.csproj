@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C89E4BB1-8DE4-45B5-AAFA-3391C5D6FC8A}</ProjectGuid>
+    <ProjectGuid>{46BCAC2C-4633-4E32-B3B0-800AE4148722}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>GestorDeEstudantesT7</RootNamespace>
     <AssemblyName>GestorDeEstudantesT7</AssemblyName>
@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MySql.Data">
-      <HintPath>..\..\..\..\Downloads\MySql.Data.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\mysql-connector-net-8.4.0\v4.6.2\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Estudante.cs" />
     <Compile Include="FormInserirEstudante.cs">
       <SubType>Form</SubType>
     </Compile>

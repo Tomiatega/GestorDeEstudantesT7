@@ -215,6 +215,7 @@
             this.buttonCadastrar.TabIndex = 34;
             this.buttonCadastrar.Text = "Salvar";
             this.buttonCadastrar.UseVisualStyleBackColor = true;
+            this.buttonCadastrar.Click += new System.EventHandler(this.buttonCadastrar_Click_1);
             // 
             // button1
             // 
@@ -305,10 +306,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButtonFeminino;
-        private System.Windows.Forms.RadioButton radioButtonMasculino;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePickerNascimento;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -323,5 +321,8 @@
         internal System.Windows.Forms.TextBox textBoxSobrenome;
         internal System.Windows.Forms.TextBox textBoxID;
         internal System.Windows.Forms.TextBox textBoxNome;
+        internal System.Windows.Forms.DateTimePicker dateTimePickerNascimento;
+        internal System.Windows.Forms.RadioButton radioButtonFeminino;
+        internal System.Windows.Forms.RadioButton radioButtonMasculino;
     }
 }

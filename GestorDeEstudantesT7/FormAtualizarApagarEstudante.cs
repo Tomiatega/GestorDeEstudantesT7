@@ -18,6 +18,9 @@ namespace GestorDeEstudantesT7
             InitializeComponent();
         }
 
+        Estudante estudante = new Estudante();
+
+
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
@@ -48,7 +51,6 @@ namespace GestorDeEstudantesT7
 
         private void buttonCadastrar_Click_1(object sender, EventArgs e)
         {
-            Estudante estudante = new Estudante();
 
             //Esta linha só existe em "buttonSalvar_Click(...)"
             int id = Convert.ToInt32(textBoxID.Text);
@@ -115,6 +117,35 @@ namespace GestorDeEstudantesT7
             else
             {
                 return true;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //Referência a ID do aluno
+            int idDoAluno = Convert.ToInt32(textBoxID.Text);
+
+            //Mostrar uma caixa de diálogo
+            //tem certeza de que quer apagar o aluno.
+            if(MessageBox.Show("Tem certeza de que quer apagar o aluno?",
+                    "Apagar Estudante",MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (estudante.apagarEstudante(idDoAluno))
+                {
+                    MessageBox.Show("Aluno apagado!",
+                        "Apagar Estudante", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+
+                    //Limpa as caixas de texto.
+                    textBoxID.Text = "";
+                    textBoxNome.Text = "";
+                    textBoxSobrenome.Text = "";
+                    textBoxTelefone.Text = "";
+                    textBoxEndereco.Text = "";
+
+                }
+
             }
         }
     }

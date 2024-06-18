@@ -46,7 +46,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxID = new System.Windows.Forms.TextBox();
             this.buttonCadastrar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonApagar = new System.Windows.Forms.Button();
             this.buttonEnviarFoto = new System.Windows.Forms.Button();
             this.buttonBuscar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
@@ -217,15 +217,16 @@
             this.buttonCadastrar.UseVisualStyleBackColor = true;
             this.buttonCadastrar.Click += new System.EventHandler(this.buttonCadastrar_Click_1);
             // 
-            // button1
+            // buttonApagar
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(439, 492);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 41);
-            this.button1.TabIndex = 35;
-            this.button1.Text = "Apagar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonApagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonApagar.Location = new System.Drawing.Point(439, 492);
+            this.buttonApagar.Name = "buttonApagar";
+            this.buttonApagar.Size = new System.Drawing.Size(90, 41);
+            this.buttonApagar.TabIndex = 35;
+            this.buttonApagar.Text = "Apagar";
+            this.buttonApagar.UseVisualStyleBackColor = true;
+            this.buttonApagar.Click += new System.EventHandler(this.button1_Click);
             // 
             // buttonEnviarFoto
             // 
@@ -275,7 +276,7 @@
             this.Controls.Add(this.textBoxNome);
             this.Controls.Add(this.buttonBuscar);
             this.Controls.Add(this.buttonEnviarFoto);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonApagar);
             this.Controls.Add(this.buttonCadastrar);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBoxFoto);
@@ -311,7 +312,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonCadastrar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonApagar;
         private System.Windows.Forms.Button buttonEnviarFoto;
         private System.Windows.Forms.Button buttonBuscar;
         private System.Windows.Forms.Label label8;

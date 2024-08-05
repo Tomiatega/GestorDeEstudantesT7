@@ -57,6 +57,12 @@
     <Compile Include="FormAtualizarApagarEstudante.Designer.cs">
       <DependentUpon>FormAtualizarApagarEstudante.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormEstatistica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEstatistica.Designer.cs">
+      <DependentUpon>FormEstatistica.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormInserirEstudante.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormAtualizarApagarEstudante.resx">
       <DependentUpon>FormAtualizarApagarEstudante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEstatistica.resx">
+      <DependentUpon>FormEstatistica.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormInserirEstudante.resx">
       <DependentUpon>FormInserirEstudante.cs</DependentUpon>

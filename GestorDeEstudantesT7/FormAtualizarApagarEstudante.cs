@@ -91,7 +91,7 @@ namespace GestorDeEstudantesT7
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch 
+            catch
             {
                 MessageBox.Show("Ocorreu um erro.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -117,17 +117,41 @@ namespace GestorDeEstudantesT7
         {
             try
             {
+                // Referência a ID do aluno.
+                int idDoAluno = Convert.ToInt32(textBoxID.Text);
 
+                // Mostrar uma caixa de diálogo perguntando se o usuário
+                // tem certeza de que quer apagar o aluno.
+                if (MessageBox.Show("Tem certeza que deseja apagar o aluno?",
+                    "Apagar Estudante", MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    if (estudante.apagarEstudante(idDoAluno))
+                    {
+                        MessageBox.Show("Aluno apagado!",
+                            "Apagar Estudante", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
+
+                        // Limpa as caixas de texto.
+                        textBoxID.Text = "";
+                        textBoxNome.Text = "";
+                        textBoxTelefone.Text = "";
+                        textBoxEndereco.Text = "";
+                        dateTimePickerNascimento.Value = DateTime.Now;
+                        pictureBoxFoto.Image = null;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Aluno não apagado!",
+                            "Apagar Estudante", MessageBoxButtons.OK,
+                            MessageBoxIcon.Error);
+                    }
+                }
             }
-            catch 
+            catch
             {
-
-                MessageBox.Show("Ocorreu um erro.", "Erro" , MessageBoxButtons.OK, MessageBoxIcon.Error);   
+                MessageBox.Show("Ocorreu um erro.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-       
-            
-            // Referência a ID do aluno.
-           
         }
 
         // Variável global do tipo MeuBancoDeDados...

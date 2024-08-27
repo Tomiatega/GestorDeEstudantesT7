@@ -58,7 +58,7 @@
             this.buttonIncluir = new System.Windows.Forms.Button();
             this.buttonRemover = new System.Windows.Forms.Button();
             this.buttonRedefinir = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonSalvar = new System.Windows.Forms.Button();
             this.labelTotalDeAlunos = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFoto)).BeginInit();
@@ -262,6 +262,7 @@
             this.buttonAtualizar.TabIndex = 51;
             this.buttonAtualizar.Text = "Atualizar";
             this.buttonAtualizar.UseVisualStyleBackColor = true;
+            this.buttonAtualizar.Click += new System.EventHandler(this.buttonAtualizar_Click);
             // 
             // dataGridViewListaDeAlunos
             // 
@@ -271,6 +272,7 @@
             this.dataGridViewListaDeAlunos.Name = "dataGridViewListaDeAlunos";
             this.dataGridViewListaDeAlunos.Size = new System.Drawing.Size(635, 464);
             this.dataGridViewListaDeAlunos.TabIndex = 50;
+            this.dataGridViewListaDeAlunos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewListaDeAlunos_CellContentClick);
             this.dataGridViewListaDeAlunos.Click += new System.EventHandler(this.dataGridViewListaDeAlunos_Click);
             // 
             // label1
@@ -299,6 +301,7 @@
             this.buttonBuscarDado.TabIndex = 52;
             this.buttonBuscarDado.Text = "Buscar";
             this.buttonBuscarDado.UseVisualStyleBackColor = true;
+            this.buttonBuscarDado.Click += new System.EventHandler(this.buttonBuscarDado_Click);
             // 
             // buttonBaixarFoto
             // 
@@ -320,6 +323,7 @@
             this.buttonIncluir.TabIndex = 59;
             this.buttonIncluir.Text = "Incluir";
             this.buttonIncluir.UseVisualStyleBackColor = true;
+            this.buttonIncluir.Click += new System.EventHandler(this.buttonIncluir_Click);
             // 
             // buttonRemover
             // 
@@ -330,6 +334,7 @@
             this.buttonRemover.TabIndex = 58;
             this.buttonRemover.Text = "Remover";
             this.buttonRemover.UseVisualStyleBackColor = true;
+            this.buttonRemover.Click += new System.EventHandler(this.buttonRemover_Click);
             // 
             // buttonRedefinir
             // 
@@ -342,15 +347,16 @@
             this.buttonRedefinir.UseVisualStyleBackColor = true;
             this.buttonRedefinir.Click += new System.EventHandler(this.buttonRedefinir_Click);
             // 
-            // button2
+            // buttonSalvar
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(87, 517);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(73, 41);
-            this.button2.TabIndex = 60;
-            this.button2.Text = "Salvar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSalvar.Location = new System.Drawing.Point(87, 517);
+            this.buttonSalvar.Name = "buttonSalvar";
+            this.buttonSalvar.Size = new System.Drawing.Size(73, 41);
+            this.buttonSalvar.TabIndex = 60;
+            this.buttonSalvar.Text = "Salvar";
+            this.buttonSalvar.UseVisualStyleBackColor = true;
+            this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
             // 
             // labelTotalDeAlunos
             // 
@@ -369,7 +375,7 @@
             this.ClientSize = new System.Drawing.Size(1015, 589);
             this.Controls.Add(this.labelTotalDeAlunos);
             this.Controls.Add(this.buttonRedefinir);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.buttonIncluir);
             this.Controls.Add(this.buttonRemover);
             this.Controls.Add(this.buttonBaixarFoto);
@@ -439,7 +445,7 @@
         private System.Windows.Forms.Button buttonIncluir;
         private System.Windows.Forms.Button buttonRemover;
         private System.Windows.Forms.Button buttonRedefinir;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonSalvar;
         private System.Windows.Forms.Label labelTotalDeAlunos;
     }
 }
